@@ -40,7 +40,7 @@ namespace ArkaneSystems.MouseJiggle
             // 
             // jiggleTimer
             // 
-            this.jiggleTimer.Interval = 1000;
+            this.jiggleTimer.Interval = 50000;
             this.jiggleTimer.Tick += new System.EventHandler(this.jiggleTimer_Tick);
             // 
             // cbEnabled
