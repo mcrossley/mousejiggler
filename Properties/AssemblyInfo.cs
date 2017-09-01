@@ -27,7 +27,7 @@ Tick the 'Enable jiggle?' checkbox to begin jiggling the mouse; untick it to sto
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("Arkane Systems")]
 [assembly: AssemblyProduct ("MouseJiggle")]
-[assembly: AssemblyCopyright ("Copyright © Alistair J. R. Young 2007-2013")]
+[assembly: AssemblyCopyright("Copyright © Alistair J. R. Young/Mark Crossley 2007-2017")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -52,6 +52,6 @@ Tick the 'Enable jiggle?' checkbox to begin jiggling the mouse; untick it to sto
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.7.0.0")]
-[assembly: AssemblyFileVersion("1.7.0.0")]
+[assembly: AssemblyVersion("1.7.1.0")]
+[assembly: AssemblyFileVersion("1.7.1.0")]
 [assembly: NeutralResourcesLanguage ("en-US")]

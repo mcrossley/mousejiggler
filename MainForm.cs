@@ -52,6 +52,7 @@ namespace ArkaneSystems.MouseJiggle
         private void cbEnabled_CheckedChanged (object sender, EventArgs e)
         {
             this.jiggleTimer.Enabled = this.cbEnabled.Checked;
+            this.menuItem2.Checked = this.cbEnabled.Checked;
         }
 
         private void cmdAbout_Click (object sender, EventArgs e)
@@ -82,7 +83,10 @@ namespace ArkaneSystems.MouseJiggle
                 this.cbZenJiggle.Checked = true;
 
             if (Program.StartJiggling)
+            {
                 this.cbEnabled.Checked = true;
+                this.menuItem2.Checked = true;
+            }
 
             if (Program.StartMinimized)
                 this.cmdToTray_Click(this, null);
@@ -128,5 +132,22 @@ namespace ArkaneSystems.MouseJiggle
             // hide tray icon
             this.nifMin.Visible = false;
         }
+
+        private void menuItem1_Click(object sender, EventArgs e)
+        {
+            // Close the form, which closes the application.
+            Application.Exit();
+        }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+            // Toggle the enable checkbox
+            this.cbEnabled.Checked = !this.cbEnabled.Checked;
+            // Call the enable 'clicked' function
+            this.cbEnabled_CheckedChanged(sender, e);
+            // Set the system tray context menu
+            this.menuItem2.Checked = this.cbEnabled.Checked;
+        }
+
     }
 }

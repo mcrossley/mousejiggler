@@ -1,11 +1,11 @@
 mousejiggler
 ============
 
-Mouse Jiggler is a very simple piece of software whose sole function is to "fake" mouse input to Windows, and 
+Mouse Jiggler is a very simple piece of software whose sole function is to "fake" mouse input to Windows, and
 jiggle the mouse pointer back and forth.
 
-Useful for avoiding screensavers or other things triggered by idle detection that, for whatever reason, you 
-can't turn off any other way; or as a quick way to stop a screensaver activating during an installation or 
+Useful for avoiding screensavers or other things triggered by idle detection that, for whatever reason, you
+can't turn off any other way; or as a quick way to stop a screensaver activating during an installation or
 when monitoring a long operation without actually having to muck about with the screensaver settings.
 
 Operation
@@ -27,6 +27,10 @@ The "-z" / "--zen" command-line switch forces zen jiggling to be enabled for the
 of MouseJiggler.
 
 (Added in 1.5+): The "-m" / "--minimized" command-like switch tells MouseJiggler to start already minimized.
+
+(Changed in 1.7+):
+ - The mouse now only moves every 50 seconds, the minimum Windows timeout is 1 minute, so this should be plenty.
+ - Added a system tray context menu to enable/disable the jiggle, and exit the program
 
 That's it. Enjoy!
 

@@ -90,6 +90,21 @@ namespace ArkaneSystems.MouseJiggle
             this.nifMin.Icon = ((System.Drawing.Icon)(resources.GetObject("nifMin.Icon")));
             this.nifMin.Text = "Mouse Jiggler";
             this.nifMin.DoubleClick += new System.EventHandler(this.nifMin_DoubleClick);
+            // Create a simple tray menu with only two items.
+            this.contextMenu = new System.Windows.Forms.ContextMenu();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            // Initialize contextMenu
+            this.contextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { this.menuItem1, this.menuItem2 });// Initialize menuItem
+            this.menuItem1.Index = 1;
+            this.menuItem1.Text = "E&xit";
+            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+            this.menuItem2.Index = 0;
+            this.menuItem2.Text = "Enabled";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
+            // The ContextMenu property sets the menu that will
+            // appear when the systray icon is right clicked.
+            this.nifMin.ContextMenu = this.contextMenu;
             // 
             // MainForm
             // 
@@ -120,6 +135,9 @@ namespace ArkaneSystems.MouseJiggle
         private System.Windows.Forms.CheckBox cbZenJiggle;
         private System.Windows.Forms.Button cmdToTray;
         private System.Windows.Forms.NotifyIcon nifMin;
+        private System.Windows.Forms.ContextMenu contextMenu;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem2;
     }
 }
 
